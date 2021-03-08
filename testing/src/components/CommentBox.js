@@ -4,6 +4,7 @@ import * as actions from "actions";
 
 class CommentBox extends Component {
   state = { comment: "" };
+
   handleChange = (event) => {
     this.setState({ comment: event.target.value });
   };
