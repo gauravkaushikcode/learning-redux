@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "publishToHeroku": "cd ../../ && git subtree push --prefix auth/client heroku-app-frontend-react-client master || true",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

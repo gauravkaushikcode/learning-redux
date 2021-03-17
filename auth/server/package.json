@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "clean": "rimraf dist-server"
+    "clean": "rimraf dist-server",
+    "publishToHeroku": "cd ../../ && git subtree push --prefix auth/server heroku-app-backend-nodejs-server master || true"
   },
   "author": "",
   "license": "ISC",
