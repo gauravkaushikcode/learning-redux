@@ -4,7 +4,7 @@ import { compose } from "redux";
 import { connect } from "react-redux";
 import * as actions from "../../actions";
 
-class Signup extends Component {
+class Signin extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +14,7 @@ class Signup extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
   onSubmit(formProps) {
-    this.props.signup(formProps, () => {
+    this.props.signin(formProps, () => {
       this.props.history.push("/feature");
     });
   }
@@ -73,7 +73,7 @@ class Signup extends Component {
               />
             </fieldset>
             <div>{this.props.errorMessage}</div>
-            <button type="submit">Sign Up!</button>
+            <button type="submit">Sign In!</button>
           </Form>
         )}
       </Formik>
@@ -85,4 +85,4 @@ function mapStateToProps(state) {
   return { errorMessage: state.auth.errorMessage };
 }
 
-export default compose(connect(mapStateToProps, actions))(Signup);
+export default compose(connect(mapStateToProps, actions))(Signin);
